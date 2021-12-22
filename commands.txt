@@ -1,0 +1,36 @@
+Author: Gary Yihuan Zhang
+ - Email: zhany870@mcmaster.ca
+ SMS-BOT phone#: 4144090257
+
+ Software Description:
+ - This is a SMS-bot used to track the CryptoCurrency in real time;
+ - The bot can return not only the exchange rate for each currency, but also the past 24-hour market data
+ - The bot can log the user's trading data, the bot is able to record the data into a Redis database
+
+ Commands:
+ - Price (symbol)	//returns the latest price for the entered two currency
+ - 24hrs (symbol)	//returns the past 24-hour ticker price change statistics
+ - Bid (symbol)		//returns the current bid (price & quantity for both Buy&Sell)
+ - Avg (symbol)		//as price for each trade is different, this command returns the average 
+ - Viewlog (your name)	//returns the trading notes associated to the username
+ - Log (your name) (symbol) (quantity) [price]	//to log your trading info (price will be market value if not specified)
+ - Symbol	//to see all the symbols
+ - Anything else	//returns the commands
+
+ Examples:
+ 1. To see the rate of DogeCoin to Australian-Dollar in real time:
+ 	- text "Price DOGEAUD"
+ 2. To see the price change of BitCoin to US-Dollar in the past 24 hours:
+ 	- text "24hrs BTCUSDT"
+ 3. To see the current bid info of Etherum to BitCoin on the market:
+ 	- text "Bid ETHBTC"
+ 4. To see the average trade of BitCoint to British-Pound:
+ 	- text "Avg BTCGBP"
+ 5. To see some popular symbols:
+ 	- text "Symbol"
+ 6. To log (sell) 3 BitCoints trading info (or mark current rate) with market price:
+ 	- text "Log MyName BTCUSDT 3"
+ 7. To retrieve the trading info:
+ 	- text "Viewlog MyName"
+ 8. To log a ETH-BTC trading info with given price:
+ 	- text "Log MyName ETHBTC 0.031"
